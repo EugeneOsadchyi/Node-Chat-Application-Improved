@@ -1,0 +1,87 @@
+.button,
+.button:hover {
+  color:#fff;
+  padding:10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button {
+  border-color: #265f82;
+  background: #265f82;
+  cursor: pointer;
+  transition: background .3s ease
+}
+
+.button:hover {
+  background: #1F4C69;
+}
+
+.button.disabled {
+  cursor: default;
+  background: #698ea5
+}
+
+.button.primary {
+  background: #265f82;
+  color: #fff;
+}
+
+.button.secondary {
+  background: #fff;
+  color: #265f82;
+  border: 1px solid #265f82;
+}
+
+.button.secondary:hover {
+  background: #e2e2e2;
+  color: #265f82;
+}
+
+.flash-container {
+  position: absolute;
+  top: 0;
+  line-height: 35px;
+  background-color: yellow;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.flash-container .close {
+  position: absolute;
+  right: 0;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+
+.account-bar {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 10px;
+  background-color: #e1e1e1;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.account-bar span:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+.account-bar__email,
+.account-bar__logout {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.account-bar a.account-bar__logout {
+  color: #265f82;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.account-bar a:hover.account-bar__logout {
+  color: #265f8291;
+}

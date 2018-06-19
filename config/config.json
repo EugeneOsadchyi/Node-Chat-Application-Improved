@@ -1,0 +1,10 @@
+{
+  "development": {
+    "PORT"        : 3000,
+    "MONGODB_URI" : "mongodb://localhost:27017/AwesomeChatApp",
+    "JWT_SECRET"  : "Aq6PNJzanKHBxFHszhJEGPom",
+    "SECRET_KEY"  : "tpA8qxHrxEydjLYQRmyLovqt",
+    "UPLOAD_DIR"  : "public/uploads",
+    "UPLOAD_MAX_FILE_SIZE": 20000
+  }
+}

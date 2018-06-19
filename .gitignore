@@ -1,0 +1,9 @@
+node_modules/
+npm-debug.log
+yarn-error.log
+
+logs/*.log
+!logs/.keep
+
+public/uploads/*
+!public/uploads/.keep

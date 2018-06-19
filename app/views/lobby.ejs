@@ -1,0 +1,37 @@
+<div class="centered-form">
+  <div class="centered-form__form">
+    <div class="lobby-prompt">
+
+      <section class="create-room">
+        <form action="/rooms" method="post">
+          <div class="form-field">
+            <h3>Create a Room</h3>
+          </div>
+          <div class="form-field">
+            <label>Room name</label>
+            <input type="text" name="name" autofocus />
+          </div>
+          <div class="form-field">
+            <button>Create</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="available-rooms">
+        <div class="form-field">
+          <h3>Available Rooms</h3>
+        </div>
+        <div class="form-field" id="rooms">
+          <ol class="available-rooms__list">
+            <% rooms.forEach(function (room) { %>
+              <li><a href="/chat/<%= room._id %>"><%= room.name %></a></li>
+            <% }); %>
+          </ol>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="/css/lobby.css" />

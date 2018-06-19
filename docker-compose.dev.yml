@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - '80:3000'
+    command: yarn watch
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      MONGODB_URI: mongodb://mongo:27017/AwesomeChatApp
+      JWT_SECRET: Aq6PNJzanKHBxFHszhJEGPom
+      SECRET_KEY: tpA8qxHrxEydjLYQRmyLovqt
+      UPLOAD_DIR: public/uploads
+      UPLOAD_MAX_FILE_SIZE: 20000
+    volumes:
+      - ./:/usr/src/app
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:3-jessie
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  webapp-uploads:
+  mongo-data:

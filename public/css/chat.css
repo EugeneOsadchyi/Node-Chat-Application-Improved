@@ -1,0 +1,30 @@
+.chat__sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar__actions {
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.chat__footer .send-file {
+  display: inline-block;
+}
+
+.chat__footer .send-file input[type=file] {
+  position: absolute;
+  top: -1000px;
+}
+
+.chat__footer .send-file span {
+  margin: 0;
+}
+
+.log {
+  color: gray;
+  font-size: 70%;
+  margin: 5px;
+  text-align: center;
+}

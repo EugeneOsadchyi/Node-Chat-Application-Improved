@@ -1,0 +1,56 @@
+<div class="chat">
+  <div class="chat__sidebar">
+    <div class="sidebar__users">
+      <h3>People</h3>
+      <div id="users"></div>
+    </div>
+
+    <div class="sidebar__actions">
+      <a href="/lobby" class="button">Leave</a>
+    </div>
+  </div>
+
+  <div class="chat__main">
+
+    <ol id="messages" class="chat__messages"></ol>
+
+    <div class="chat__footer">
+      <form id="message-form">
+        <input name="message" type="text" placeholder="Message" autofocus autocomplete="off" />
+        <button>Send</button>
+        <label class="button send-file">
+          <input type="file" id="send_file" />
+          <span>Send File</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+
+<script id="message-template" type="text/template">
+  <li class="message">
+    <div class="message__title">
+      <h4>{{from}}</h4>
+      <span>{{createdAt}}</span>
+    </div>
+    <div class="message__body">
+      <p>{{text}}</p>
+    </div>
+    {{#file}}
+    <div class="message__file">
+      <a href="{{file['0'].url}}"><i class="fas fa-paperclip"></i>{{file['0'].name}}</a>
+    </div>
+    {{/file}}
+  </li>
+</script>
+
+<link rel="stylesheet" href="/css/chat.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/siofu/client.js"></script>
+<script src="/js/libs/moment.js"></script>
+<script src="/js/libs/mustache.min.js"></script>
+<script src="/js/chat.js"></script>
